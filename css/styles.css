@@ -29,7 +29,7 @@ img {
   height: auto;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--first-text-color);
 }
 address {
@@ -74,7 +74,7 @@ header {
   color: var(--accent-text-color);
 }
 .menu-link.current::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -32px;
@@ -572,6 +572,7 @@ header {
   align-items: baseline;
 }
 .left {
+  flex-grow: 1;
   margin-right: 70px;
 }
 .right {
@@ -586,7 +587,8 @@ header {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.portfolio-link:hover .portfolio-link-text {
+.portfolio-link:hover .portfolio-link-text,
+.portfolio-link:focus .portfolio-link-text {
   transform: translateY(0);
 }
 .backdrop {
@@ -691,6 +693,7 @@ header {
   fill: var(--accent-text-color);
 }
 .modal-form-message {
+  display: block;
   padding: 12px 16px;
   height: 120px;
   width: 100%;
@@ -743,13 +746,14 @@ header {
   letter-spacing: 0.03em;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .modal-form-chbox-label::before {
   display: block;
-  content: "";
+  content: '';
   width: 18px;
   height: 17px;
-  border: 1px solid #212121;
+  border: 2px solid #212121;
   /* border-color: transparent; */
   cursor: pointer;
   border-radius: 2px;
@@ -789,7 +793,6 @@ header {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
-  margin-right: 12px;
 }
 .footer-form-input::placeholder {
   font-size: 16px;
@@ -818,7 +821,7 @@ header {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-button::after {
-  content: "";
+  content: '';
   background-image: url(../images/icon-send.svg);
   width: 24px;
   height: 24px;
